@@ -4,7 +4,7 @@
 	 * If you cannot play sound on this computer, set canPlaySounds to false.
 	 * If you are not sure, ask your teacher 
 	 * *****************/
-boolean canPlaySounds = true;
+boolean canPlaySounds = false;
 
 void setup() {
   
@@ -12,9 +12,9 @@ void setup() {
   PImage waldo = loadImage("waldo.jpg"); // Change this to match your file name.
   size(600, 400); 
   // Resize your waldo picture to the same size as the sketch
-  
+  waldo.resize(600, 400);
   // Make the waldo image your sketch background
-
+  background(waldo);
 }
 
 void draw() {
@@ -43,24 +43,3 @@ void draw() {
 /*********************  This code is needed to play sounds. ********************
               Remove the comment markers below, but DON'T CHANGE THE CODE */
               
-
-/*
-import ddf.minim.*;
-Minim minim = new Minim(this); 
-
-AudioSample woohoo;
-void playWoohoo() {
-     if (woohoo == null) 
-         woohoo = minim.loadSample("homer-woohoo.wav");
-     woohoo.stop();
-     woohoo.trigger();
-}
-
-AudioSample doh;
-void playDoh() {
-     if (doh == null)
-         doh = minim.loadSample("homer-doh.wav"); 
-     doh.stop();
-     doh.trigger();
-}
-*/
